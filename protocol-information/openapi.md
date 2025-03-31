@@ -2,110 +2,103 @@
 hidden: true
 ---
 
-# Takara Lend Contract Overview
+# Takara Lend 合约概述
 
-### Introduction
+### 简介
 
-Takara is a decentralized lending protocol that allows users to borrow and supply crypto assets. The core mechanisms include supply, borrowing, liquidation, and governance. Users earn interest by supplying assets or pay interest when borrowing assets.
+Takara 是一个去中心化借贷协议，允许用户借入和供应加密资产。协议的核心机制包括供应、借款、清算和治理。用户通过供应资产赚取利息，或在借款时支付利息。
 
-## Core Contracts
+## 核心合约
 
-### Comptroller
+### Comptroller（控制器）
 
-* The Comptroller is the main management contract in Takara Lend, responsible for:
-* Managing the addition and removal of markets
-* Setting borrowing and liquidation parameters
-* Calculating user liquidity and health factor
-* Distributing TKL token rewards
-  * \[WIP]
+* **Comptroller** 是 Takara Lend 协议的主要管理合约，负责以下事项：
+  * 管理市场的添加与移除
+  * 设置借款和清算的参数
+  * 计算用户的流动性和健康因子
+  * 分发 TKL 代币奖励
+    * \[进行中]
 
-### Global Factors
+### 全局参数
 
-Global factors are common parameters that apply to the entire Takara Lend protocol. These are usually set at the governance level and affect all assets. The main global factors include:
+全局参数是适用于整个 Takara Lend 协议的共同参数，通常由治理层设置，并且影响所有资产。主要的全局参数包括：
 
-### Reserve Factor:
+### 储备因子（Reserve Factor）：
 
-* Determines the portion of each interest payment that is reserved into the protocol’s reserves.
-* For example, if the reserve factor is 10%, then 10% of each interest payment is reserved, and the remaining 90% is distributed to suppliers.
+* 确定每笔利息支付中保留到协议储备中的部分。
+* 例如，如果储备因子为 10%，则每笔利息支付中 10% 会进入储备，剩余的 90% 会分发给供应者。
 
-### Close Factor:
+### 清算因子（Close Factor）：
 
-* Determines the maximum portion of a borrower’s debt that can be repaid during liquidation.
-* For example, if the close factor is 50%, then liquidators can repay up to 50% of the borrower’s debt.
+* 确定在清算过程中借款人债务的最大可偿还部分。
+* 例如，如果清算因子为 50%，则清算者最多可偿还借款人债务的 50%。
 
-### Collateral Factor
+### 抵押因子（Collateral Factor）
 
-* Determines the proportion of an asset’s value that can be borrowed.
-* For example, if the collateral factor is 75%, an asset worth $100 can be used to borrow up to $75 of other assets.
+* 确定可以借入的资产价值比例。
+* 例如，如果抵押因子为 75%，则价值 100 美元的资产可以用来借入最多 75 美元的其他资产。
 
-### Liquidation Incentive
+### 清算激励（Liquidation Incentive）
 
-* Determines the reward given to liquidators during liquidation.
-* For example, if a token has a liquidation incentive of 110%, liquidators can buy collateral at a 10% discount during liquidation.
+* 确定在清算过程中给予清算者的奖励。
+* 例如，如果某个代币的清算激励为 110%，则清算者可以以 10% 的折扣购买抵押物。
 
-**Precision of Factors:** In smart contract programming, using fixed precision is a common practice to ensure the accuracy of numerical operations. All factor values are specified with a precision of **1e18**. This means that the factor values are multiplied by 1e18 to avoid precision issues that arise from floating-point arithmetic in smart contracts. For example, if the reserve factor is 10%, the value set in the contract would be **0.1 \* 1e18 = 1e17**
-
-
+**精度因素：** 在智能合约编程中，使用固定精度是确保数值操作准确性的一种常见做法。所有因素值都以 **1e18** 的精度指定，这意味着这些因素值会乘以 1e18，以避免浮动点运算中产生的精度问题。例如，如果储备因子为 10%，则合约中设置的值为 **0.1 \* 1e18 = 1e17**。
 
 ## tToken
 
-**tToken** contracts represent the lending markets for each asset, such as rETH, rUSDC, etc. Key functions include:
+**tToken** 合约代表每种资产的借贷市场，如 rETH、rUSDC 等。主要功能包括：
 
-1. **mint**: Supply underlying assets to the protocol and receive rTokens
-2. **redeem**: Redeem underlying assets
-3. **borrow**: Borrow underlying assets
-4. **repayBorrow**: Repay borrowed assets
+1. **mint**：将基础资产供应到协议中并获得 rToken
+2. **redeem**：赎回基础资产
+3. **borrow**：借入基础资产
+4. **repayBorrow**：偿还借入的资产
 
+### 资产
 
+**每个代币的因素**
 
-### Asset
+每个代币有其独特的 `factor` 设置，用于确定该代币在协议中的行为和风险参数。
 
-**Per-Token Factors**
+**储备因子**
 
-Each token has its own unique `factor` settings, which determine the behavior and risk parameters of that specific token within the protocol.
+每个代币可以有其独特的储备因子，决定其利息支付中有多少比例进入储备。
 
-**Reserve Factor**
+**抵押因子**
 
-Each token can have its own reserve factor, determining the portion of its interest payments that go into the reserves.
+* 确定该特定代币价值中可借入的比例。
+* 高风险资产通常具有较低的抵押因子，而低风险资产则具有较高的抵押因子。
 
-**Collateral Factor**
+**清算份额（Seize Share）**：
 
-* Determines the proportion of that specific token's value that can be borrowed.
-* High-risk assets typically have lower collateral factors, while low-risk assets have higher collateral factors.
+* 确定在清算过程中分配给清算者的清算抵押物的比例。
+* 例如，如果清算份额为 2.8%，则意味着清算者获得 2.8% 的清算抵押物作为奖励。
 
-**Seize Share:**
+**借款和供应上限**
 
-* Determines the portion of seized collateral that is distributed to liquidators during the liquidation process.
-* For example, if the seize share is 2.8%, it means that liquidators receive 2.8% of the seized collateral as a reward.
+借款和供应上限是对协议中可借入或供应的特定资产数量设定的限制。这些上限有助于管理风险，防止过度借贷或供应特定资产，从而导致流动性或波动性问题。
 
-**Borrow And Supply Caps**
+## 利率模型（InterestRateModel）
 
-Borrow and supply caps are limits set on the amount of a specific asset that can be borrowed or supplied within the protocol. These caps help manage risk by preventing excessive borrowing or supplying of a particular asset, which can lead to liquidity or volatility issues.
+**InterestRateModel** 合约定义了每个市场的利率模型。利率会根据市场的使用率动态调整，以平衡供需。
 
+### JumpRateModel
 
+**JumpRateModel** 是 Takara Lend 协议中使用的一种特殊利率模型。它在某个使用率点处会发生利率的“跳跃”，以帮助维持流动性。此模型有三个关键参数：
 
-## InterestRateModel
+* **基础利率（Base Rate）：** 当使用率为 0% 时的利率。
+* **乘数（Multiplier）：** 随着使用率增加而提高的利率。
+* **跳跃乘数（Jump Multiplier）：** 一旦使用率超过某个阈值，适用的更高利率，激励更多的流动性供应。
+* **拐点（Kink）：** 使用率超过某个阈值时，跳跃乘数开始生效的点。
 
-The InterestRateModel contract defines the interest rate model for each market. Rates adjust dynamically based on the utilization rate of the market to balance supply and demand.
+## 价格预言机（Price Oracle）
 
-**JumpRateModel**
+**PriceOracle** 合约提供市场资产的价格信息，用于计算借款和清算的资格。
 
-The **JumpRateModel** is a specific type of interest rate model used in some of Takara Lend. It features a "jump" in the interest rate at a certain utilization point, which helps maintain liquidity. This model has three key parameters:
-
-* **Base Rate:** The interest rate when the utilization is 0%.
-* **Multiplier:** Determines the increase in the interest rate as utilization increases.
-* **Jump Multiplier:** A higher rate that applies once utilization surpasses a certain threshold, incentivizing more liquidity supply.
-* **Kink**: The utilization point at which the jump multiplier is applied
-
-## Price Oracle
-
-The PriceOracle contract provides price information for market assets, used to calculate borrowing and liquidation eligibility.
-
-* **getGracePeriodTime:** Returns the grace period time set for price feeds.
-* **getFreshCheck:** Returns the threshold time for considering a price feed as “fresh”.
-* **getSequencerUptimeFeed:** Returns the address of the sequencer uptime feed used to check if the sequencer is up
-* **getChainlinkPriceFeed:** Returns the Chainlink price feed address for a given tToken
-* **getChainlinkPrice:** Fetches the latest Chainlink price for a given tToken
-* **getPrice(RToken rToken):** Returns the current price for the specified tToken using the highest priority oracle
-* **getUnderlyingPrice:** Returns the underlying asset’s price for the specified tToken
-
+* **getGracePeriodTime：** 返回价格数据源的宽限期时间。
+* **getFreshCheck：** 返回检查价格数据源是否为“新鲜”数据的时间阈值。
+* **getSequencerUptimeFeed：** 返回用于检查序列器是否正常运行的序列器正常运行数据源地址。
+* **getChainlinkPriceFeed：** 返回给定 tToken 的 Chainlink 价格数据源地址。
+* **getChainlinkPrice：** 获取给定 tToken 的最新 Chainlink 价格。
+* **getPrice(RToken rToken)：** 返回使用最高优先级预言机获取的指定 tToken 的当前价格。
+* **getUnderlyingPrice：** 返回指定 tToken 对应基础资产的价格。
