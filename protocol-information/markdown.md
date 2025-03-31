@@ -2,81 +2,107 @@
 hidden: true
 ---
 
-# Credit Limit & Liquidation
+# 信用额度与清算
 
-The term "Credit Limit" in the context of Takara Lend refers to the maximum amount of funds that users can borrow based on the collateral they provide.&#x20;
+在 Takara Lend 中，“信用额度”指的是用户根据提供的抵押品可以借款的最大金额。
 
-When users activate the 'collateral switch' feature and provide assets as collateral, the value of these assets determines the credit limit that they can access. The higher the value of the collateral, the larger the credit limit will be.
+当用户激活“抵押开关”功能并提供资产作为抵押时，这些资产的价值决定了他们可获得的信用额度。抵押品的价值越高，信用额度越大。
 
-The credit limit serves as a safeguard to ensure that borrowers have adequate collateral to secure their loans. It helps maintain the stability of the lending process and reduces the risk of default. By setting a credit limit, Takara can ensure a responsible borrowing and lending environment for all participants.
+信用额度作为一种保障措施，确保借款人拥有足够的抵押品来担保其贷款。这有助于维护借贷过程的稳定性并减少违约风险。通过设定信用额度，Takara 可以为所有参与者提供一个负责任的借贷环境。
 
-"Credit Limit" is calculated using the formula:
+**信用额度**的计算公式为：
 
-∑_UserMarketTotalSuppliedi&#x6E;_&#x55;SD∗_CollateralFactor_
+```
+∑_用户市场总提供金额（USD） * 抵押因子
+```
 
-Let's consider an example where a user deposits $1000 worth of USDC as collateral in the Takara Lend protocol. The collateral factor assigned to USDC is 60%.
+假设用户在 Takara Lend 协议中存入价值 $1000 的 USDC 作为抵押，USDC 的抵押因子为 60%。
 
-* To calculate the "Credit Limit", we use the following formula:
+* 计算“信用额度”使用以下公式：
 
-_CreditLimit_=(_UserMarketTotalSuppliedi&#x6E;_&#x55;SD)(_CollateralFactor_)
+```
+信用额度 = 用户市场总提供金额 * 抵押因子
+信用额度 = $1000 * 0.6 = $600
+```
 
-* In this case, the credit limit would be: Credit Limit = $1000 \* 0.6 = $600
-* Therefore, based on this example, the credit limit for the user would be $600. This means that the user can borrow funds up to a maximum of $600, depending on their borrowing needs and the available collateral.
-* It's important to note that the credit limit helps maintain a responsible borrowing environment and ensures that borrowers have sufficient collateral to secure their loans.
+因此，根据此示例，用户的信用额度为 $600。这意味着用户最多可以借款 $600，具体取决于其借款需求和可用的抵押品。
 
+需要注意的是，信用额度有助于维护负责任的借贷环境，并确保借款人拥有足够的抵押品来保障其贷款。
 
+---
 
-## Understanding Remaining Credit
+### **理解剩余信用**
 
-"Credit Remaining" refers to the amount of credit or funds that are available for a user to borrow.
+“剩余信用”指的是用户可以借款的剩余信用或资金。
 
-A higher "Credit Remaining" indicates a healthier collateral ratio and provides a safer margin against potential liquidation. On the other hand, a lower "Credit Remaining" suggests a higher risk of liquidation. When the "Credit Remaining" drops to $0 or 0%, the risk of liquidation becomes significant.
+较高的“剩余信用”表示更健康的抵押比例，并为潜在的清算提供更安全的缓冲。另一方面，较低的“剩余信用”则表明清算风险较高。当“剩余信用”降至 $0 或 0% 时，清算风险变得显著。
 
-Monitoring the "Credit Remaining" closely is crucial to avoid reaching a point where there is no remaining credit available. Maintaining a sufficient "Credit Remaining" is essential for managing loans effectively and mitigating the risk of liquidation. By ensuring a healthy margin between the borrowed funds and the collateral value, users can maintain a more stable and secure position.
+密切监控“剩余信用”至关重要，以避免达到没有剩余信用可用的状态。保持足够的“剩余信用”对于有效管理贷款并降低清算风险至关重要。通过确保借款资金与抵押品价值之间保持健康的差距，用户可以保持更稳定和安全的借款位置。
 
-The value of "Credit Remaining" is calculated using the formula:
+**剩余信用**的计算公式为：
 
-(∑UserMarketTotalSuppliedinUSD∗CollateralFactor)−UserTotalBorrowedinUSD
+```
+(∑用户市场总提供金额（USD） * 抵押因子) - 用户总借款金额（USD）
+```
 
-Let's consider an example where a user deposits $1000 worth of USDC as collateral in Takara. The collateral factor assigned to USDC is 60%. The user decides to borrow $100 of USDC.
+假设用户在 Takara 中存入价值 $1000 的 USDC 作为抵押，USDC 的抵押因子为 60%。用户决定借款 $100 的 USDC。
 
-*   Step 1: Calculating the "Credit Limit"
+* **步骤 1**：计算“信用额度”
 
-    The credit limit is determined by multiplying the total amount of collateral supplied by the user in USD with the collateral factor.&#x20;
+  信用额度通过将用户总抵押金额（USD）与抵押因子相乘来确定。
 
-Credit Limit = (User Market Total Supplied in USD) (Collateral Factor) Credit Limit = $1000 0.6 = $600
+```
+信用额度 = 用户市场总提供金额（USD） * 抵押因子
+信用额度 = $1000 * 0.6 = $600
+```
 
-*   Step 2: Calculating the "Credit Remaining"
+* **步骤 2**：计算“剩余信用”
 
-    The credit remaining is obtained by subtracting the total amount borrowed by the user in USD from the credit limit.&#x20;
+  剩余信用通过从信用额度中减去用户借款的总金额（USD）来得出。
 
-Credit Remaining = Credit Limit - User Total Borrowed in USD Credit Remaining = $600 - $100 = $500
+```
+剩余信用 = 信用额度 - 用户总借款金额（USD）
+剩余信用 = $600 - $100 = $500
+```
 
-In this example, after borrowing $100 of USDC, the user's "Credit Remaining" decreases to $500. It's important to note that if the remaining credit drops to a value of $0, it puts the user's position at risk of liquidation. Therefore, monitoring the "Credit Remaining" is crucial to ensure a safe margin against potential liquidation and to maintain a stable borrowing position.
+在此示例中，借款 $100 的 USDC 后，用户的“剩余信用”降至 $500。需要注意的是，如果剩余信用降至 $0，用户的仓位将面临清算风险。因此，监控“剩余信用”至关重要，以确保在潜在清算风险下保持安全的缓冲区，并维持稳定的借款位置。
 
-The percentage of "Credit Remaining" is calculated using the formula:
+**剩余信用百分比**的计算公式为：
 
-`[(∑User Market Total Supplied in USD * Collateral Factor) - User Total Borrowed in USD]`
+```
+[(∑用户市场总提供金额（USD） * 抵押因子) - 用户总借款金额（USD）] / 信用额度 * 100
+```
 
-Let's consider an example where a user deposits $1000 worth of USDC as collateral. The collateral factor assigned to USDC is 60%. The user decides to borrow $100 of USDC.
+假设用户存入价值 $1000 的 USDC 作为抵押，USDC 的抵押因子为 60%。用户决定借款 $100 的 USDC。
 
-*   Step 1: Calculate the "Credit Limit"
+* **步骤 1**：计算“信用额度”
 
-    The credit limit is determined by multiplying the total amount of collateral supplied by the user in USD with the collateral factor.&#x20;
+  信用额度通过将用户总抵押金额（USD）与抵押因子相乘来确定。
 
-Credit Limit = (User Market Total Supplied in USD) (Collateral Factor) Credit Limit = $1000 0.6 = $600
+```
+信用额度 = 用户市场总提供金额（USD） * 抵押因子
+信用额度 = $1000 * 0.6 = $600
+```
 
-*   Step 2: Calculate the percentage of "Credit Remaining"
+* **步骤 2**：计算“剩余信用百分比”
 
-    The percentage of credit remaining is obtained by dividing the difference between the credit limit and the total amount borrowed by the user in USD by the credit limit, and then multiplying by 100. Credit Remaining = Credit Limit - User Total Borrowed in USD / (Credit Limit) 100 Credit Remaining = \[$600 - $100] / ($600) 100 = 83.3%
+  剩余信用百分比通过以下步骤计算：
 
-In this example, after borrowing $100 of USDC, the user's "Credit Remaining" decreases to 83.3%. It's important to note that if the "Credit Remaining" drops to 0%, it puts the user's position at risk of liquidation. Therefore, monitoring the percentage of "Credit Remaining" is crucial to ensure a safe margin against potential liquidation and to maintain a stable borrowing position within the Rho Markets protocol.
+```
+剩余信用 = 信用额度 - 用户总借款金额（USD）
+剩余信用百分比 = [(信用额度 - 用户总借款金额（USD）) / 信用额度] * 100
+剩余信用百分比 = [($600 - $100) / $600] * 100 = 83.3%
+```
 
-To minimize the risk of liquidation, borrowers must prioritize certain measures and regularly monitor their "Credit Remaining." Liquidation occurs when a borrower fails to meet their loan obligations, leading to the sale of their collateral assets to repay the debt.
+在此示例中，借款 $100 的 USDC 后，用户的“剩余信用”降至 83.3%。需要注意的是，如果“剩余信用”降至 0%，用户的仓位将面临清算风险。因此，监控“剩余信用”的百分比至关重要，以确保在潜在清算风险下保持安全的缓冲区，并在 Rho Markets 协议中维持稳定的借款位置。
 
-To avoid liquidation, borrowers should ensure that their "Credit Remaining" remains above a value of $0 and stays above 0% by implementing the following strategies:
+---
 
-1. Loan Repayments: Making timely and regular loan repayments is crucial as it helps maintain a positive "Credit Remaining." By repaying the borrowed funds, borrowers reduce their debt and increase their credit margin, lowering the risk of liquidation.
-2. Supplying Additional Collateral: Borrowers can mitigate the risk of liquidation by providing additional collateral. Adding more collateral to the lending pool increases the credit limit and expands the available "Credit Remaining." This additional collateral acts as a buffer, providing a safer margin against potential liquidation.
+### **降低清算风险的策略**
 
-By implementing these strategies, borrowers can actively manage their borrowing positions within the Rho Markets protocol, reducing the risk of liquidation and ensuring a more secure and stable borrowing experience. Regular monitoring of the "Credit Remaining" is essential to take proactive steps and maintain a healthy collateral position.
+为了降低清算风险，借款人应优先采取以下措施，并定期监控“剩余信用”：
+
+1. **按时还款**：及时和定期偿还贷款至关重要，因为它有助于保持积极的“剩余信用”。通过偿还借款，借款人减少了债务并增加了信用边际，从而降低清算风险。
+2. **提供额外抵押品**：借款人可以通过提供额外的抵押品来减少清算风险。向借贷池提供更多的抵押品可以提高信用额度并增加可用的“剩余信用”。这些额外的抵押品作为缓冲，提供了更安全的清算风险边际。
+
+通过采取这些策略，借款人可以在 Rho Markets 协议中积极管理其借款仓位，减少清算风险，并确保更加安全稳定的借款体验。定期监控“剩余信用”至关重要，以便采取主动措施并保持健康的抵押品仓位。
