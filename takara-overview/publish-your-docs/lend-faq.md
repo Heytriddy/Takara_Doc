@@ -2,51 +2,52 @@
 description: Frequently Asked Questions - Lending
 ---
 
-# Lend FAQ
+# 出借常见问题
 
-## How is the Supply APY Calculated?
+## 如何计算供应年化收益率（Supply APY）？
 
-The Supply APY (Annual Percentage Yield) of an asset on Takara consists of two components: [Base APY](lend-faq.md#base-apy) and [Rewards](lend-faq.md#rewards).
+在 Takara 平台上，资产的供应年化收益率（Supply APY）由两部分组成：[基础年化收益率（Base APY）](lend-faq.md#base-apy) 和 [奖励（Rewards）](lend-faq.md#rewards)。
 
-### Base APY
+### 基础年化收益率（Base APY）
 
-The Base APY is the interest rate that lenders earn through automatic compounding when supplying assets on Takaraa. It is determined by the fees collected from borrowers.
+基础年化收益率是指出借者通过自动复利在 Takara 平台上供应资产所获得的利率。该利率由借款人支付的费用决定。
 
-Here are the key points to understand about Base APY:
+以下是有关基础年化收益率的关键要点：
 
-1. **Auto-Compounding**
-   * The Base APY is automatically compounded back into the smart contract of the supplied asset.
-   * No manual claiming is required, making the process seamless for users.
-2. **Asset-Specific Rewards**
-   * Earnings are distributed in the specific token that the protocol is distributing.
-   * For example, if the rewarding asset is SEI, you will receive additional SEI rewards for supplying assets.
-3. **How Base APY Is Determined**
-   * **Algorithmic Calculation:** Base APY is calculated based on the market's utilization rate.
-   * **Interest Rate Curves:** Defined through Takara Governance, these curves establish the relationship between market utilization and Base APY.
-   * **Utilization Impact:**
-     * Higher market utilization (more borrowing) results in a higher Base APY.
-     * Lower market utilization leads to a lower Base APY.
-   * **Monitoring Base APY**
-     * Users can track their Base APY earnings over time by reviewing the supplied value of their chosen asset.
+1. **自动复利**
+   * 基础年化收益率会自动复利至所供应资产的智能合约中。
+   * 无需手动领取，过程对用户而言无缝衔接。
+2. **资产特定奖励**
+   * 收益以协议分发的特定代币形式分配。
+   * 例如，如果奖励资产为 SEI，供应资产时将额外获得 SEI 奖励。
+3. **基础年化收益率的确定方式**
+   * **算法计算：** 基础年化收益率基于市场的使用率进行计算。
+   * **利率曲线：** 由 Takara 治理定义，这些曲线确定了市场使用率与基础年化收益率之间的关系。
+   * **使用率的影响：**
+     * 市场使用率越高（借款越多），基础年化收益率越高。
+     * 市场使用率较低时，基础年化收益率则较低。
+   * **监控基础年化收益率**
+     * 用户可通过查看所选资产的供应价值来跟踪其基础年化收益率的收益变化。
 
-### Rewards
+### 奖励（Rewards）
 
-Rewards are additional incentives that need to be manually claimed by the user.
+奖励是额外的激励，需要用户手动领取。
 
-**Key Aspects of Rewards:**
+**奖励的主要方面：**
 
-* **Manual Claiming**
-  * Rewards need to be manually claimed through the "Rewards" page.
-* **APR (Annual Percentage Rate)**
-  * Rewards are calculated in APR and do not compound automatically.
-* **Sources**
-  * Rewards may come from various providers or grants.
-  * For instance, supplying USDC may allows users to earn rewards in both SEI and USDC tokens.
+* **手动领取**
+  * 奖励需通过 “Rewards” 页面手动领取。
+* **年化利率（APR）**
+  * 奖励按年化利率计算，并不会自动复利。
+* **奖励来源**
+  * 奖励可能来自不同的提供方或补助金。
+  * 例如，供应 USDC 可使用户获得 SEI 和 USDC 代币形式的奖励。
 
-## Market Utilization and Liquidity
+---
 
-Market utilization measures the proportion of borrowed funds compared to the total supply of assets within a given market.
+## 市场使用率与流动性
 
-* Utilization exceeding 100% means the total borrowed amount, including accrued interest, has surpassed the total supply.
-* As utilization nears 100%, liquidity shortages may make it challenging to withdraw assets.
+市场使用率衡量的是借出资金与市场中总供应资产之间的比例。
 
+* 使用率超过 100% 意味着包括累计利息在内的总借款金额已经超过了总供应量。
+* 当使用率接近 100% 时，流动性不足可能会使资产提现变得困难。
