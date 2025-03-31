@@ -1,9 +1,9 @@
 # Table of contents
 
-## Discover
+## 发现
 
-* [🔖 Story](README.md)
-* [💎 About Takara](discover/about-takara.md)
+* [🔖 故事](README.md)
+* [💎 关于 Takara](discover/about-takara.md)
 * [🔴 Sei V2 EVM](discover/sei-v2-evm.md)
 * [🔗 Quick Links](discover/quick-links.md)
 
