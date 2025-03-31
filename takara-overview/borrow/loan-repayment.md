@@ -2,31 +2,31 @@
 description: How to repay your active loan (borrow) on Takara
 ---
 
-# Loan Repayment
+# 还款
 
-## Overview
+## 概述
 
-Unlike traditional finance, loans on Takara have no fixed repayment timelines. Borrowers can maintain their loans indefinitely, provided their “Credit Remaining” balance stays above $0. If this condition is not met, the liquidation process is triggered, resulting in the borrower’s collateral being seized to repay the loan.
+与传统金融不同，Takara 的贷款没有固定的还款时间表。只要借款人的 “Credit Remaining” 保持在 $0 以上，其贷款便可无限期维持；一旦该条件未能满足，将触发清算程序，借款人的抵押品将被没收以偿还贷款。
 
-## Loan Structure
+## 贷款结构
 
-Loans on Takara have no fixed repayment schedule or maturity date. They remain active as long as the borrower’s “Credit Remaining” stays above the liquidation threshold.
+Takara 的贷款没有固定的还款计划或到期日。只要借款人的 “Credit Remaining” 保持在清算阈值以上，贷款便保持有效。
 
-## Accrued Interest Impact
+## 累计利息的影响
 
-Although there are no fixed repayment deadlines, interest will continue to accumulate over time. This accrued interest can reduce the borrower’s remaining credit, increasing the risk of liquidation. The borrowing rate is determined by the supply and demand dynamics of the underlying asset.
+虽然没有固定的还款期限，但利息会随时间不断累计。这些累计利息会减少借款人的剩余信用额度，从而增加清算风险。借款利率由基础资产的供需动态决定。
 
-## How to Repay
+## 还款操作
 
-1. Navigate to "**Dashboard**".
-2. Choose the asset you would like to repay.
-3. Switch to "**Repay**" using the tabs at the top of the modal.
+1. 进入 "**Dashboard**" 页面。  
+2. 选择需要还款的资产。  
+3. 将弹窗顶部的选项切换至 "**Repay**" 模式。
 
 <div align="left"><figure><img src="../../.gitbook/assets/Screenshot 2025-01-23 at 9.16.44 PM.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
-4. With the "**Repay**" modal and preferred asset selected, enter the amount to be repaid.
+4. 在 "**Repay**" 弹窗中选择所需资产后，输入还款金额。
 
 <div align="left"><figure><img src="../../.gitbook/assets/Screenshot 2025-01-23 at 9.32.51 PM.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
-4. Click "**Repay**"
-5. Confirm the transaction in your wallet and wait for its execution. Once successful, you will have repaid the desired amount of the borrowed asset.
+5. 点击 "**Repay**"。  
+6. 在钱包中确认交易并等待执行。交易成功后，即完成所需资产的还款。
