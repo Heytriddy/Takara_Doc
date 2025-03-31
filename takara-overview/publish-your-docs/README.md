@@ -1,8 +1,8 @@
-# 🤝 Lend
+# 🤝 出借
 
 <figure><img src="../../.gitbook/assets/lend.png" alt=""><figcaption></figcaption></figure>
 
-Takara allows users to lend their assets in single-sided liquidity pools, commonly referred to as money markets, and earn variable interest rates. Lending your digital assets on Takara also serves as the initial step required to borrow other assets on the platform.
+Takara 允许用户在单边流动性池中出借资产（通常称为货币市场），并获得浮动利率收益。在 Takara 平台上出借数字资产同时也是借款其他资产的前置步骤。
 
 {% content-ref url="supply.md" %}
 [supply.md](supply.md)
@@ -20,7 +20,7 @@ Takara allows users to lend their assets in single-sided liquidity pools, common
 [lend-faq.md](lend-faq.md)
 {% endcontent-ref %}
 
-## **Supported Assets**
+## **支持的资产**
 
 {% tabs %}
 {% tab title="SEI V2" %}
