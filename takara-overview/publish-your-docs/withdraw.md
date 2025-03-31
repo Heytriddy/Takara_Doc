@@ -2,7 +2,7 @@
 description: Learn how to withdraw your assets from Takara
 ---
 
-# 提取
+# 提取资产
 
 ## 如何提取
 
