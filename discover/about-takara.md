@@ -1,12 +1,15 @@
 ---
 description: Sei Less, Do More.
+description: 极简操作，丰沛回报
 ---
 
-# 💎 About Takara
+# 💎 关于 Takara
 
-Takara is a decentralized, open-source money market protocol natively built on the Sei blockchain. Powered by Sei’s high-throughput consensus mechanism and parallelized block processing, Takara offers lightning-fast, cost-efficient transactions, creating an optimized environment for borrowing and lending digital assets.
+Takara是原生构建于Sei区块链的去中心化开源货币市场协议。
 
-Discover Takara: Unlock the potential of your assets and experience the power of simplicity with our streamlined platform!
+通过集成Sei网络的高吞吐量共识机制与并行化区块处理架构，Takara 提供极速且低成本的交易，打造高效优化的数字资产借贷环境。
+
+Takara的核心价值主张是为用户提供兼具机构级安全标准与消费级易用性的链上信贷基础设施。
 
 ## Simple, Smart Lending
 
