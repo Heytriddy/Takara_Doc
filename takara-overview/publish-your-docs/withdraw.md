@@ -2,48 +2,48 @@
 description: Learn how to withdraw your assets from Takara
 ---
 
-# Withdraw
+# 提取
 
-## How to Withdraw
+## 如何提取
 
-### Step 1: Select Asset to Withdraw
+### 第一步：选择要提取的资产
 
-**Option 1**
+**选项 1**
 
-1. Navigate to "Dashboard" page.
+1. 进入 "Dashboard" 页面。
 
-**Option 2**
+**选项 2**
 
-1. Navigate to "Market" page.
-2. Locate the "**Open Positions**" section and click on "**Withdraw**" for the desired asset.&#x20;
+1. 进入 "Market" 页面。  
+2. 定位到 "**Open Positions**" 部分，并点击目标资产旁的 "**Withdraw**" 按钮。
 
-### Step 2: Completing Withdraw Transaction
+### 第二步：完成提取交易
 
-1. Select "**Withdraw**" from the modal.
+1. 在弹出的 "**Withdraw**" 窗口中选择 "**Withdraw**" 选项。
 
-<div align="center"><figure><picture><source srcset="../../.gitbook/assets/Screenshot 2025-01-19 at 7.49.34 PM.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/Screenshot 2025-01-19 at 7.49.26 PM.png" alt="" width="375"></picture><figcaption><p>In this example, the USDT token is used. However, you can select other assets by using the dropdown menu.</p></figcaption></figure></div>
+<div align="center"><figure><picture><source srcset="../../.gitbook/assets/Screenshot 2025-01-19 at 7.49.34 PM.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/Screenshot 2025-01-19 at 7.49.26 PM.png" alt="" width="375"></picture><figcaption><p>在本例中，使用的是 USDT 代币。但您也可通过下拉菜单选择其他资产。</p></figcaption></figure></div>
 
-2. With the "**Withdraw**" modal selected, enter the amount you wish to withdraw from Takara. **Please** confirm if there is enough liquidity to proceed with the withdrawal. More information can be found below.
-3. Click "**Withdraw**".
+2. 在 "**Withdraw**" 窗口中，输入您希望从 Takara 提取的金额。**请**确认当前有足够的流动性以完成提取。更多信息请参见下文。
+3. 点击 "**Withdraw**" 按钮。
 
-<div align="center"><figure><picture><source srcset="../../.gitbook/assets/Screenshot 2025-01-19 at 7.52.37 PM.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/Screenshot 2025-01-19 at 7.52.31 PM.png" alt="" width="375"></picture><figcaption><p>To initiate the withdrawal process, simply click on "Withdraw."</p></figcaption></figure></div>
+<div align="center"><figure><picture><source srcset="../../.gitbook/assets/Screenshot 2025-01-19 at 7.52.37 PM.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/Screenshot 2025-01-19 at 7.52.31 PM.png" alt="" width="375"></picture><figcaption><p>点击 "Withdraw" 即可发起提取操作。</p></figcaption></figure></div>
 
-4. **Confirm** the transaction in your wallet and wait for it to complete. Once successful, you will have withdrawn from the desired market.
+4. 在您的钱包中 **确认** 交易并等待其完成。交易成功后，您将从目标市场中提取出相应资产。
 
 {% hint style="success" %}
-Once the transaction is confirmed, you will have exchanged the tTokens in your wallet with the asset tokens that you initially deposited into the protocol.
+交易确认后，您的钱包中的 tTokens 将会兑换成最初存入协议的资产代币。
 
-Every asset supported by the protocol has its own corresponding tToken. For instance, tUSDT represents the minted version of USDT token on Sei V2.
+Takara 协议支持的每种资产均对应一个 tToken。例如，tUSDT 表示在 Sei V2 上铸造的 USDT 代币版本。
 {% endhint %}
 
-## Checking Available Liquidity
+## 检查可用流动性
 
-Before initiating a withdrawal, it’s essential to ensure there is enough available liquidity in the protocol. Withdrawals can only be completed if sufficient unborrowed liquidity exists. If liquidity is insufficient, the transaction may fail.
+在发起提取之前，请务必确认协议中有足够的可用流动性。只有在存在足够未被借出的流动性时，提取操作才能顺利完成。如果流动性不足，交易可能会失败。
 
-### **Compare Withdrawal Amount with Liquidity**
+### **比较提取金额与流动性**
 
-To prevent transaction failures, users should compare the withdrawal amount with the available liquidity in the market they wish to withdraw from. To check a market’s liquidity, navigate to either the "Lend" or "Borrow" section, select the desired asset, and review the market information provided.
+为避免交易失败，用户应将欲提取金额与目标市场的可用流动性进行对比。您可以通过进入 "Lend" 或 "Borrow" 部分，选择目标资产并查看相应市场信息来检查流动性。
 
-### Waiting for Liquidity
+### 等待流动性补充
 
-If the available liquidity is insufficient to complete the withdrawal, users will need to wait until additional liquidity becomes available. Liquidity increases when lenders supply more of the desired asset or when borrowers repay their loans.
+若当前可用流动性不足以完成提取操作，用户需等待直至额外流动性到位。通常，当出借者存入更多目标资产或借款者偿还贷款时，市场流动性将增加。
