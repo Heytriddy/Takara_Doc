@@ -37,6 +37,6 @@ Takara is designed with simplicity and usability at its core. The platform offer
 
 Security is the foundation of Takara’s design philosophy. The protocol implements robust security measures to safeguard users and their assets. By prioritizing security, Takara ensures that the community can lend and borrow with confidence.
 
-4. Tr**ansparent and Trustworthy**
+4. **Transparent and Trustworthy**
 
 Takara operates entirely onchain, ensuring every transaction and operation is transparent and verifiable. This level of visibility offers a stark contrast to traditional, centralized financial systems, fostering trust and accountability within the community.
