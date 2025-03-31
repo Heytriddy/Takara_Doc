@@ -1,26 +1,26 @@
-# 🛡️ Security
+# 🛡️ 安全性
 
 <figure><img src="../.gitbook/assets/security.png" alt=""><figcaption></figcaption></figure>
 
-## Takara Security Measures
+## Takara 安全措施
 
-Takara is dedicated to delivering a secure and dependable protocol for its users. To accomplish this, it has implemented a robust set of security measures aimed at minimizing risks, addressing potential vulnerabilities, and ensuring the protocol’s integrity and resilience.
+Takara 致力于为其用户提供一个安全可靠的协议。为此，它实施了一套强有力的安全措施，旨在最小化风险、解决潜在的漏洞，并确保协议的完整性和韧性。
 
-The following security measures have been implemented:
+以下是已实施的安全措施：
 
-1. **Security Audits**
+1. **安全审计**
 
-Takara's smart contracts and systems have undergone thorough audits by one or more top-tier security firms. These audits involve an in-depth analysis of the protocol’s codebase to detect and mitigate potential security vulnerabilities, ensuring adherence to best practices. Takara contributors work closely with auditors to resolve any identified issues, enhancing the protocol’s overall security.
+Takara 的智能合约和系统已由一家或多家顶级安全公司进行了全面审计。这些审计涉及对协议代码库的深入分析，以发现和减轻潜在的安全漏洞，并确保遵循最佳实践。Takara 的贡献者与审计员紧密合作，解决任何发现的问题，从而增强协议的整体安全性。
 
-To further strengthen its security, Takara has partnered with [**Zellic Security**](https://www.zellic.io/), a leading blockchain security firm. This partnership enables Takara to promptly identify and address new vulnerabilities, ensuring the protocol remains secure and resilient over time.
+为了进一步增强安全性，Takara 已与[**Zellic Security**](https://www.zellic.io/)——一家领先的区块链安全公司——建立了合作关系。此合作使得 Takara 能够及时发现并解决新的漏洞，确保协议在长期内保持安全和韧性。
 
-2. **Dynamic Price Oracles**
+2. **动态价格预言机**
 
-Takara leverages multiple price oracles to ensure accurate and reliable price feeds. The system dynamically selects between [API3](https://api3.org/), [Redstone](https://www.redstone.finance/), and [Pyth](https://www.pyth.network/) for asset oracle pricing, providing seamless continuity in case any oracle becomes unavailable.
+Takara 利用多个价格预言机确保价格信息的准确性和可靠性。系统动态选择 [API3](https://api3.org/)、[Redstone](https://www.redstone.finance/) 和 [Pyth](https://www.pyth.network/) 作为资产的预言机定价来源，从而确保在某个预言机不可用时仍能提供无缝的连续性。
 
-This dynamic oracle system reduces the risk of price manipulation, which is essential for maintaining the integrity of the protocol and protecting user funds.
+这一动态预言机系统减少了价格操控的风险，这是保持协议完整性并保护用户资金的关键。
 
-3. **Safety Module(COMING SOON)**
+3. **安全模块（即将完成）**
 
-The Takara Safety Module provides an extra layer of protection against unexpected events, such as smart contract vulnerabilities, liquidation failures, or oracle disruptions. Integrated into Takara’s security framework, the Safety Module strengthens the protocol’s resilience and ensures greater reliability.
+Takara 安全模块为意外事件提供额外的保护层，例如智能合约漏洞、清算失败或预言机故障。该模块集成到 Takara 的安全框架中，增强了协议的韧性并确保更高的可靠性。
 
