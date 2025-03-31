@@ -11,7 +11,7 @@
 
 * [💠 快速开始](takara-overview/quickstart/README.md)
   * [连接钱包](takara-overview/quickstart/wallet-connection.md)
-* [🤝 Lend](takara-overview/publish-your-docs/README.md)
+* [🤝 存入资产](takara-overview/publish-your-docs/README.md)
   * [Supply](takara-overview/publish-your-docs/supply.md)
   * [Withdraw](takara-overview/publish-your-docs/withdraw.md)
   * [Claiming Rewards](takara-overview/publish-your-docs/claiming-rewards.md)
