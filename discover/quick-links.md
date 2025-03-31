@@ -1,6 +1,6 @@
-# 🔗 Quick Links
+# 🔗 快速链接
 
-## Takara Community
+## Takara 社区
 
 * [Twitter](https://x.com/TakaraLend)
 * [Discord](https://discord.com/invite/WPQjz3jqaN)
