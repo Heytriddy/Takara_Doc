@@ -4,13 +4,13 @@
 
 * [🔖 故事](README.md)
 * [💎 关于 Takara](discover/about-takara.md)
-* [🔴 Sei V2 EVM](discover/sei-v2-evm.md)
-* [🔗 Quick Links](discover/quick-links.md)
+* [🔴 关于 Sei V2 EVM](discover/sei-v2-evm.md)
+* [🔗 链接](discover/quick-links.md)
 
-## Takara Overview
+## Takara 概览
 
-* [💠 Get started](takara-overview/quickstart/README.md)
-  * [Wallet Connection](takara-overview/quickstart/wallet-connection.md)
+* [💠 快速开始](takara-overview/quickstart/README.md)
+  * [连接钱包](takara-overview/quickstart/wallet-connection.md)
 * [🤝 Lend](takara-overview/publish-your-docs/README.md)
   * [Supply](takara-overview/publish-your-docs/supply.md)
   * [Withdraw](takara-overview/publish-your-docs/withdraw.md)
