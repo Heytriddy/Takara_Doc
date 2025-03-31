@@ -14,7 +14,7 @@
 * [🤝 出借](takara-overview/publish-your-docs/README.md)
   * [存入资产](takara-overview/publish-your-docs/supply.md)
   * [取出资产](takara-overview/publish-your-docs/withdraw.md)
-  * [领取奖励](takara-overview/publish-your-docs/claiming-rewards.md)
+  * [领取APR奖励](takara-overview/publish-your-docs/claiming-rewards.md)
   * [出借常见问题](takara-overview/publish-your-docs/lend-faq.md)
 * [🤝 借款](takara-overview/borrow/README.md)
   * [如何借款](takara-overview/borrow/how-to-borrow.md)
