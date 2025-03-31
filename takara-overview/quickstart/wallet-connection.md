@@ -1,9 +1,9 @@
-# Wallet Connection
+# 钱包连接
 
-1. Locate and click the "**Connect Wallet**" button in the top right corner of the Takara application. A "Connect" modal will appear, displaying a list of supported wallet options.
+1. 在 Takara 应用程序右上角找到并点击 "**Connect Wallet**" 按钮。此时将弹出一个 “Connect” 窗口，显示支持的钱包选项列表。
 
-<figure><img src="../../.gitbook/assets/connectwallet.gif" alt=""><figcaption><p>Connet Wallet</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/connectwallet.gif" alt=""><figcaption><p>连接钱包</p></figcaption></figure>
 
-2. Select your preferred wallet from the list. Your wallet will then ask for your permission to connect your chosen wallet to the Takara application.
+2. 从列表中选择您偏好的钱包。随后，您的钱包会请求权限，以连接您所选的钱包到 Takara 应用程序。
 
-Once these steps are completed successfully, your wallet will be connected to Takara, allowing you to interact with all of its features.
+完成以上步骤后，您的钱包将成功连接至 Takara，从而可以使用其所有功能。
