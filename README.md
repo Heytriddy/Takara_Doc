@@ -1,9 +1,8 @@
 ---
-description: The Meaning Behind "Takara"
+description: "Takara"背后的文化意涵
 ---
 
-# 🔖 Story
+# 🔖 背景故事
 
-"Takara" is a Japanese word meaning "treasure" or "precious object." Rooted in ancient Japanese culture, the name embodies values of rarity, worth, and profound appreciation. In Japanese society, treasure transcends material wealth—it represents something cherished, meaningful, and extraordinary.
-
-At Takara, we draw inspiration from these cultural ideals in our mission to empower users with tools that unlock the true value of their digital assets.
+"Takara"源于日语「宝」（たから），意指具备稀缺性与内在价值的珍贵事物。
+这一命名不仅承载着对文化遗产的致敬，更隐喻着数字资产在去中心化金融（DeFi）体系中的核心地位——每个加密资产都应获得与其价值相匹配的安全守护与增值通道。
