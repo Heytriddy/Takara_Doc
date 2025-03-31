@@ -1,12 +1,12 @@
-# 🤝 Borrow
+# 🤝 借贷
 
 <figure><img src="../../.gitbook/assets/borrow.png" alt=""><figcaption></figcaption></figure>
 
-Takara enables users to leverage or “collateralize” their digital assets to borrow other assets. By supplying assets to the Takara protocol, users can access over-collateralized loans.
+Takara 允许用户利用或“抵押”其数字资产，以借入其他资产。通过向 Takara 协议提供资产，用户可以获得超额抵押贷款。
 
-The maximum borrowing capacity is determined by the value of the supplied collateral and the parameters defined by Takara Governance.
+最大借贷能力由所提供的抵押品价值以及 Takara 治理设定的参数决定。
 
-## **Supported Assets**
+## **支持的资产**
 
 {% tabs %}
 {% tab title="SEI V2" %}
