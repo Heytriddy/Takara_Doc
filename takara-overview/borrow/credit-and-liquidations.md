@@ -2,124 +2,94 @@
 description: Learn about credit limits and how to avoid liquidation
 ---
 
-# Credit and Liquidations
+# 📌 信用额度与清算
 
-## Understanding Credit Limit
+## **信用额度的定义**  
 
-The term "Credit Limit" in the context of Takara Lend refers to the maximum amount of funds that users can borrow based on the collateral they provide.&#x20;
+在 Takara Lend 中，"信用额度"（Credit Limit）指的是用户可以借贷的最大资金量，由其提供的抵押资产决定。  
 
-When users activate the 'collateral switch' feature and provide assets as collateral, the value of these assets determines the credit limit that they can access. The higher the value of the collateral, the larger the credit limit will be.
+当用户激活 **“抵押开关”** 并提供资产作为抵押时，这些资产的总价值决定了他们的信用额度。抵押资产价值越高，信用额度也越高。  
 
-The credit limit serves as a safeguard to ensure that borrowers have adequate collateral to secure their loans. It helps maintain the stability of the lending process and reduces the risk of default. By setting a credit limit, Takara can ensure a responsible borrowing and lending environment for all participants.
+信用额度的设立是为了确保借款人有足够的抵押物来保障贷款，从而维持借贷市场的稳定性，并降低违约风险。通过设定信用额度，Takara 能够提供一个 **负责任** 且 **安全** 的借贷环境。
 
-"Credit Limit" is calculated using the formula:
-
+**信用额度计算公式：**  
 ```
-∑User Market Total Supplied in USD * Collateral Factor
+信用额度 = ∑用户市场总供应资产（USD） × 抵押因子
 ```
 
-{% hint style="info" %}
-The [Collateral Factor](../../protocol-information/protocol-information.md#collateral-factor) represents the maximum percentage of collateral value that can be borrowed.
-{% endhint %}
+📌 **示例**：
+- 用户存入 $1000 USDC 作为抵押  
+- USDC 的抵押因子为 **60%**  
+- 计算信用额度：  
+  ```
+  信用额度 = $1000 × 0.6 = $600
+  ```
+- 因此，用户最多可以借 **$600**。
 
-{% hint style="info" %}
-Example:
+---
 
-* User deposits $1000 of USDC to the protocol as collateral.
-* The collateral factor of USDC is 60%.
-* Calculate the "Credit Limit"
+## **信用余额（Credit Remaining）**  
 
-Credit Limit = `∑User Market Total Supplied in USD * Collateral Factor`
+**信用余额** 指的是用户当前 **尚可借出的额度**。  
 
-Credit Limit = $1000 \* 0.6 = $600
+- **信用余额高** → 说明有足够的抵押，清算风险低  
+- **信用余额低** → 说明清算风险高  
+- **信用余额 = 0** → 可能被清算！  
 
-* Therefore, in this example, the credit limit of $600. This means you can borrow up to $600.
-{% endhint %}
+**信用余额计算公式：**  
+```
+信用余额 = (∑用户市场总供应资产（USD） × 抵押因子) - 用户已借款总额（USD）
+```
 
-### Understanding Credit Remaining
+📌 **示例**：
+- 用户存入 **$1000 USDC**  
+- 用户借出 **$100 USDC**  
+- USDC 抵押因子 **60%**  
+- **步骤 1**：计算信用额度  
+  ```
+  信用额度 = $1000 × 0.6 = $600
+  ```
+- **步骤 2**：计算信用余额  
+  ```
+  信用余额 = $600 - $100 = $500
+  ```
+- 结果：借出 $100 后，用户仍然有 **$500** 可借。如果信用余额降至 $0，用户就会面临清算风险。
 
-"Credit Remaining" refers to the amount of credit or funds that are available for a user to borrow.
+### **信用余额百分比计算**
+```
+信用余额百分比 = [(信用额度 - 用户已借款总额) / 信用额度] × 100%
+```
 
-A higher "Credit Remaining" indicates a healthier collateral ratio and provides a safer margin against potential liquidation. On the other hand, a lower "Credit Remaining" suggests a higher risk of liquidation. **When the "Credit Remaining" drops to $0 or 0%, the risk of liquidation becomes significant.**
+📌 **示例**：
+- 信用额度 **$600**  
+- 已借款 **$100**  
+- **计算信用余额百分比**：
+  ```
+  信用余额百分比 = ($600 - $100) / $600 = 83.3%
+  ```
+- 结果：用户借款后，信用余额为 **83.3%**。如果降至 **0%**，可能会被清算！
 
-Monitoring the "Credit Remaining" closely is crucial to avoid reaching a point where there is no remaining credit available. Maintaining a sufficient "Credit Remaining" is essential for managing loans effectively and mitigating the risk of liquidation. By ensuring a healthy margin between the borrowed funds and the collateral value, users can maintain a more stable and secure position.
+---
 
-The value of "Credit Remaining" is calculated using the formula:
+## **如何避免清算？**  
 
-`(∑User Market Total Supplied in USD * Collateral Factor) - User Total Borrowed in USD`
+如果用户未能维持足够的信用余额，Takara **会自动清算抵押资产** 以偿还借款。
 
+**避免清算的方法：**  
+1️⃣ **偿还贷款**：减少借款金额，提升信用余额。  
+2️⃣ **增加抵押**：存入更多资产，提高信用额度和可借额度。
 
+📌 **清算奖励机制**  
+当用户的贷款低于抵押要求时，清算者（Liquidators）会介入，卖出部分抵押资产，以保障协议的安全性。为了鼓励清算者，Takara 提供 **清算奖励**：
+- **7% 清算者奖金**：成功清算可获得奖励  
+- **3% 储备分配**：用于增强协议长期稳定性  
 
-{% hint style="info" %}
-**Example:**
+---
 
-* User deposits $1000 of USDC to the protocol as collateral.
-* The user borrows $100 of USDC
-* The collateral factor of USDC is 60%.
-* Step 1: Calculate the "Credit Limit"
+## **影响信用额度的因素**  
 
-Credit Limit = `∑User Market Total Supplied in USD * Collateral Factor`
+1️⃣ **已借金额**：借款越多，可用信用额度越少。  
+2️⃣ **市场波动**：抵押资产的价格波动可能影响信用额度。  
+3️⃣ **抵押资产价值变动**：资产价格上涨 → 可借额度增加；价格下跌 → 可借额度减少，风险提高。  
 
-Credit Limit = $1000 \* 0.6 = $600
-
-* Step 2: Calculate the value of "Credit Remaining"
-
-Credit Remaining = `Credit Limit - User Total Borrowed in USD`
-
-Credit Remaining = $600 - $100 = $500
-
-* In this example, when the user borrowed $100 of USDC, their "Credit Remaining" decreased to $500. If the remaining credit drops to a value of $0, the user's position becomes vulnerable to liquidation.
-{% endhint %}
-
-The percentage of "Credit Remaining" is calculated using the formula:
-
-`[(∑User Market Total Supplied in USD * Collateral Factor) - User Total Borrowed in USD] / (∑User Market Total Supplied in USD * Collateral Factor)`
-
-{% hint style="info" %}
-**Example:**
-
-* User deposits $1000 of USDC to the protocol as collateral.
-* The user borrows $100 of USDC
-* The collateral factor of USDC is 60%.
-* Step 1: Calculate the "Credit Limit"
-
-Credit Limit = `∑User Market Total Supplied in USD * Collateral Factor`
-
-Credit Limit = $1000 \* 0.6 = $600
-
-* Step 2: Calculate the percentage of "Credit Remaining"
-
-Credit Remaining = `[Credit Limit - User Total Borrowed in USD] / (Credit Limit)`
-
-Credit Remaining = \[$600 - $100] / ($600) = 83.3%
-
-* In this example, when the user borrowed $100 of USDC, their "Credit Remaining" decreased to a percentage of 83.3%. If the "Credit Remaining" drops to 0%, the user's position becomes vulnerable to liquidation.
-{% endhint %}
-
-### Avoiding Liquidation
-
-Liquidation occurs when collateral assets are sold to repay a borrower’s debt after failing to meet loan obligations.
-
-To avoid liquidation, borrowers should regularly check their “Credit Remaining” and ensure it stays above $0 and above 0%.
-
-This can be accomplished by:
-
-1. **Repaying Loans**: Making loan repayments helps maintain a positive “Credit Remaining,” reducing the risk of liquidation.
-2. **Adding More Collateral**: Supplying additional collateral increases the credit limit and available “Credit Remaining,” further decreasing the risk of liquidation.
-
-{% hint style="info" %}
-Liquidators are essential to the lending and borrowing ecosystem, ensuring the stability and efficiency of the system by managing the liquidation process. They continuously monitor and identify undercollateralized loan positions. When a loan becomes undercollateralized—either due to a decline in collateral value or an increase in the borrowed amount—liquidators intervene to safeguard depositors and, in many cases, earn a profit.
-
-To encourage liquidations and maintain the protocol’s solvency, liquidators are rewarded through a Liquidation Incentive, which includes two components:
-
-* **7% Liquidator Bonus**: Rewarded to liquidators for successfully completing liquidations, promoting the protocol’s operational efficiency.
-* **3% Reserve Allocation**: Dedicated to bolstering the protocol’s reserves, ensuring long-term sustainability.
-{% endhint %}
-
-### Factors Affecting Credit
-
-Several factors influence a borrower’s remaining credit, including:
-
-* **Borrowed Amount**: The amount already borrowed directly affects the remaining credit. As the borrowed amount increases, the available credit decreases. Borrowers should carefully evaluate their borrowing needs and risk tolerance to determine an appropriate loan amount.
-* **Market Volatility**: Fluctuations in market conditions can impact the value of collateral assets, thereby affecting the available credit. Borrowers should consider market volatility and its potential impact on their collateral when determining how much to borrow.
-* **Changes in Collateral Value**: The value of the collateral provided plays a key role in determining credit availability. Increases or decreases in collateral value can either expand or reduce the borrower’s remaining credit. Staying mindful of these changes is essential for borrowers to manage their borrowing effectively.
+💡 **总结**：保持 **健康的信用余额**，密切关注市场行情，是避免清算的关键！
