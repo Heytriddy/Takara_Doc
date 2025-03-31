@@ -1,54 +1,54 @@
-# 🖊️ Term of Service
+# 🖊️ 服务条款
 
-Users should exercise caution when interacting with any smart contract or blockchain application. While Takara employs rigorous testing, audits, and bug bounty programs to mitigate risks, smart contract vulnerabilities may still exist.
+用户在与任何智能合约或区块链应用程序交互时应保持谨慎。尽管 Takara 采用严格的测试、安全审计和漏洞赏金计划来降低风险，但智能合约仍可能存在漏洞。
 
-Takara is a decentralized application that enables users to supply, lend, and stake Sei-based tokens. While digital assets are deposited within the Takara protocol, users should be aware of potential risks, including but not limited to:
+Takara 是一个去中心化应用，允许用户提供、借贷和质押基于 Sei 的代币。尽管数字资产存储于 Takara 协议内，用户仍需知悉可能存在的风险，包括但不限于：
 
-* Losses from token price fluctuations.
-* Partial slashing of assets during shortfall events.
+* 由于代币价格波动导致的损失。
+* 在资金短缺事件中，资产可能被部分削减。
 
-Before engaging with Takara, users are advised to read the protocol documentation and ensure they fully understand its functionality and associated risks.
+在使用 Takara 之前，建议用户仔细阅读协议文档，并确保完全理解其功能及相关风险。
 
-## Risk and Liability
+## 风险与责任
 
-No entity is liable for potential risks or damages related to Takara, including direct or indirect losses, consequential damages, loss of profits, or digital assets. Users interact with Takara at their own risk.
+Takara 及任何相关实体均不对使用该协议可能带来的风险或损失负责，包括直接或间接损失、衍生性损害、利润损失或数字资产损失。用户自愿与 Takara 交互，并自行承担相应风险。
 
-## Information Does Not Constitute Advice
+## 信息不构成投资建议
 
-The information provided on the Takara platform does not constitute investment, financial, or trading advice. Users should not treat any content on the platform as such.
+Takara 平台提供的信息不构成投资、财务或交易建议。用户不应将平台上的任何内容视为此类建议。
 
-Takara offers its website and services as public tools and disclaims all liability for damages of any kind resulting from the use, reliance on, or reference to information provided. While efforts are made to keep information up-to-date, no guarantees are made regarding its accuracy, completeness, or timeliness.
+Takara 仅作为公共工具提供其网站及服务，并不对因使用、依赖或参考提供的信息而造成的任何损害负责。尽管 Takara 尽力保持信息的及时更新，但不对信息的准确性、完整性或时效性作出任何保证。
 
-## Usage Risks
+## 使用风险
 
-Takara is not responsible for losses, damages, or claims arising from:
+Takara 不对因以下情况造成的损失、损害或索赔负责：
 
-* User mistakes (e.g., incorrect transactions).
-* Software issues (e.g., malware or cryptographic vulnerabilities).
-* Technical failures (e.g., wallet malfunctions).
-* Security breaches (e.g., unauthorized wallet access).
-* Third-party actions or inactions (e.g., service provider bankruptcy, security attacks, or fraud).
+* 用户操作失误（例如错误交易）。
+* 软件问题（例如恶意软件或加密漏洞）。
+* 技术故障（例如钱包故障）。
+* 安全漏洞（例如未经授权的账户访问）。
+* 第三方行为或不作为（例如服务提供商破产、安全攻击或欺诈）。
 
-## Investment Risks
+## 投资风险
 
-Investing in cryptocurrencies carries the risk of significant financial loss and price volatility. Takara cannot guarantee against losses. Users are responsible for conducting their own research, understanding the risks, and making independent decisions when interacting with the protocol. Depositing tokens into Takara vaults exposes funds to market risks.
+加密货币投资存在重大财务损失和价格波动的风险。Takara 无法保证用户不会遭受损失。用户应自行研究、理解相关风险，并在使用协议时做出独立决策。将代币存入 Takara 保险库会使资金面临市场风险。
 
-## Tax Compliance
+## 税务合规
 
-Users are solely responsible for determining any tax obligations related to their cryptocurrency holdings. Takara contributors or operators are not responsible for determining applicable taxes for users.
+用户需自行判断并履行与其加密货币持有相关的任何税务义务。Takara 贡献者或运营方不承担确定用户适用税务的责任。
 
-## No Warranties
+## 无担保承诺
 
-Takara and its platform are provided on an “as is” basis, without any guarantees regarding functionality, performance, or reliability. The platform may be partially or fully disabled without prior notice.
+Takara 及其平台以“原样”提供，不对其功能、性能或可靠性作出任何担保。平台可能会在无事先通知的情况下部分或完全停用。
 
-## Security Limitations
+## 安全性限制
 
-While Takara undergoes extensive security audits, no system is entirely risk-free. The platform is not guaranteed to be secure, free of bugs, viruses, or immune to malicious exploits.
+尽管 Takara 经过严格的安全审计，但任何系统都无法做到完全无风险。该平台不保证绝对安全、无漏洞、无病毒，也无法免受恶意攻击。
 
-## Limitation of Liability
+## 责任限制
 
-To the extent permitted by law, neither Takara’s owners nor its contributors are liable for any damages, including but not limited to loss of use, profits, or data, arising from or related to the use of the platform.
+在法律允许的范围内，Takara 的所有者及贡献者不对因使用该平台导致的任何损害负责，包括但不限于使用损失、利润损失或数据损失。
 
-## Arbitration Agreement
+## 仲裁协议
 
-By using the Takara platform, users agree to resolve disputes through arbitration, except for issues related to intellectual property, including copyrights, trademarks, trade secrets, or patents.
+使用 Takara 平台即表示用户同意通过仲裁解决争议，但涉及知识产权（包括版权、商标、商业机密或专利）的问题除外。
