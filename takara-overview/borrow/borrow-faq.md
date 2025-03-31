@@ -2,22 +2,26 @@
 description: Frequently Asked Questions - Borrow
 ---
 
-# Borrow FAQ
+# 📖 借贷常见问题（FAQ）
 
-## How Much Can I Borrow?
+## **我能借多少？**  
 
-The amount you can borrow is determined by several factors, including the value of your supplied assets, your available credit, and the level of market liquidity. Borrowing may not be possible if there is insufficient liquidity or if your credit limit drops below the required threshold.
+你可以借贷的金额取决于多个因素，包括你提供的资产价值、可用信用额度以及市场流动性。如果市场流动性不足，或者你的信用额度低于要求的门槛，你可能无法借贷。
 
-## Are Interest Rates Stable?
+---
 
-Unlike fixed-rate loans, interest rates in the Takara protocol are dynamic, adjusting in real time based on market demand. Interest rate curves define the relationship between supply, demand, and the resulting rates. These curves can be modified through governance proposals, enabling the community to refine them and adapt to changing market conditions.
+## **利率是稳定的吗？**  
 
-Given the dynamic nature of these rates, borrowers must closely monitor their available credit. Neglecting to account for accumulating fees or fluctuating rates could put your loan at risk and potentially lead to liquidation.
+与固定利率贷款不同，Takara 协议的利率是动态调整的，会根据市场需求实时变动。利率曲线定义了供应、需求和利率之间的关系，并可以通过治理提案进行修改，以适应市场变化。  
 
-## Why Can't I Borrow an Asset?
+由于利率具有动态性，借款人需要密切关注自己的可用信用额度。如果忽视利率波动或累积费用，可能会导致贷款超出限额，甚至被清算。
 
-There are several reasons you may be unable to borrow a specific asset:
+---
 
-* **0% Collateral Factor**: Each asset has a collateral factor, which determines the percentage of its value that can be borrowed against. If an asset’s collateral factor is set to 0%, borrowing is disabled to mitigate risk.
-* **Insufficient Liquidity**: If there isn’t enough liquidity (supplied assets) available in the market, borrowing may not be possible. This happens when the demand for an asset exceeds the total amount supplied. You can either wait for more liquidity to enter the market or for existing borrowers to repay their loans.
-* **Borrow Cap Reached**: Each market has a borrow cap, limiting the total amount that can be borrowed at any given time. If the borrow cap is reached, no further borrowing is allowed. Borrow caps are designed to maintain protocol solvency and are adjusted based on factors like liquidity and utilization rates. You’ll need to wait for repayments or the borrow cap to be increased before borrowing from that market.
+## **为什么我无法借入某种资产？**  
+
+以下是一些可能导致借款失败的原因：  
+
+* **0% 抵押因子**：每种资产都有一个 **抵押因子**，决定其可借贷比例。如果某资产的抵押因子设定为 **0%**，那么它不能被用作借款抵押，以降低风险。  
+* **市场流动性不足**：如果市场中可供借出的资产不足，你将无法借入该资产。这通常发生在某资产的需求量超过供应量时。你可以等待市场流动性增加，或等待现有借款人偿还部分贷款。  
+* **借贷上限已达**：每个市场都有 **借贷上限**，即允许借出的最大总量。如果某资产的借贷上限已满，新的借贷将被暂时禁止。借贷上限是为了维护协议稳定性而设定的，通常会根据流动性和市场使用情况进行调整。你可以等待部分贷款被偿还，或等待治理提高借贷上限后再进行借贷。
