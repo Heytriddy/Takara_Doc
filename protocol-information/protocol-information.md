@@ -1,61 +1,62 @@
-# ‼️ Protocol Information
+# ‼️ 协议信息
 
 <figure><img src="../.gitbook/assets/prootocol infomation.png" alt=""><figcaption></figcaption></figure>
 
-## Collateral Factor
+## 抵押因子（Collateral Factor）
 
-The Collateral Factor represents the maximum percentage of an asset’s value that can be used as collateral for borrowing in the Takara protocol. This percentage determines how much can be borrowed against a specific asset.
+抵押因子代表资产价值中可以作为借款抵押的最大百分比。这个百分比决定了可以借入多少资产。
 
-For instance, if an asset’s Collateral Factor is 70%, up to 70% of its value can be utilized as collateral for borrowing other assets.
+例如，如果某个资产的抵押因子为 70%，则可以将其价值的最多 70% 用作借入其他资产的抵押。
 
-Here’s an example to illustrate:
+举个例子：
 
-• Suppose the Collateral Factor for ETH is set at 70%.
+• 假设 ETH 的抵押因子设置为 70%。
 
-• If you supply $1,000 worth of ETH as collateral, you can borrow up to $700 in other assets based on the Collateral Factor.
+• 如果您提供价值 1,000 美元的 ETH 作为抵押，您可以根据抵押因子借入最多 700 美元的其他资产。
 
 {% hint style="info" %}
-Important: It is strongly recommended to keep your borrowing below 80% of your limit. In the example above, with a borrowing limit of $600, it’s advisable to borrow no more than $480 ($600 × 80%). Exceeding 80% of your borrowing limit increases the risk of liquidation.
+重要提示：强烈建议将借款保持在借款限额的 80% 以下。在上述示例中，借款限额为 600 美元，建议您最多借款 480 美元（600 美元 × 80%）。超过借款限额的 80% 会增加清算的风险。
 
-Liquidation occurs when the value of your collateral falls below a certain threshold, allowing a liquidator to seize the collateral to repay the borrowed amount. By maintaining your borrowing under 80% of the limit, you reduce the risk of liquidation and the associated consequences.
+清算发生在抵押物的价值降至某一阈值以下时，清算者可以没收抵押物以偿还借款金额。通过保持借款在限额的 80% 以下，您可以减少清算的风险及其带来的后果。
 {% endhint %}
 
-## Reserve Factor
+## 储备因子（Reserve Factor）
 
-The Reserve Factor refers to the percentage of interest paid by borrowers that is allocated to the protocol’s reserves. Each market has its own reserve, which helps maintain the protocol’s stability and long-term sustainability.
+储备因子指的是借款人支付的利息中分配到协议储备中的百分比。每个市场都有自己的储备，这有助于维持协议的稳定性和长期可持续性。
 
-Here’s an example to illustrate:
+举个例子：
 
-• Suppose you borrow $1,000 USDC from the protocol.
+• 假设您从协议中借入 1,000 美元 USDC。
 
-• The USDC Borrow APY (Annual Percentage Yield) is 10%.
+• USDC 借款年化收益率（APY）为 10%。
 
-• Over one year, you would pay approximately $100 in interest.
+• 一年内，您需要支付约 100 美元的利息。
 
-• If the Reserve Factor is set at 20%, $20 of the $100 interest payment would go to the Takara USDC protocol reserve.
+• 如果储备因子设置为 20%，那么 100 美元的利息支付中将有 20 美元进入 Takara USDC 协议储备。
 
-## Close Factor
+## 清算因子（Close Factor）
 
-The Close Factor specifies the maximum percentage of a borrower’s outstanding debt that can be repaid during a single liquidation event. This percentage also determines the portion of the collateral that can be seized by the liquidator.
+清算因子指定在单次清算事件中可以偿还借款人未偿债务的最大百分比。这个百分比还决定了清算者可以没收多少抵押物。
 
-Here’s an example to illustrate:
+举个例子：
 
-• Suppose your account’s credit limit is fully utilized (0%), making it eligible for liquidation.
+• 假设您的账户信用额度已被完全使用（0%），因此符合清算条件。
 
-• You have an outstanding borrow of 100 USDC.
+• 您有 100 USDC 的未偿借款。
 
-• If the Close Factor for USDC.wh is set at 50%, the liquidator can:
+• 如果 USDC.wh 的清算因子设置为 50%，则清算者可以：
 
-• Repay 50% of your outstanding borrow (50 USDC).
+• 偿还您未偿债务的 50%（50 USDC）。
 
-• Seize an equivalent value from your collateral.
+• 没收与该债务等值的抵押物。
 
-• Receive a reward in the form of a [Liquidation Incentive](protocol-information.md#liquidation-incentive).
+• 获得形式为 [清算激励](protocol-information.md#liquidation-incentive) 的奖励。
 
-## Liquidation Incentive
+## 清算激励（Liquidation Incentive）
 
-The Liquidation Incentive in the Takara protocol is designed to reward liquidators for executing liquidations, ensuring the protocol’s solvency and promoting efficient liquidation processes. This incentive is equal to 10% of the outstanding borrow amount of an account subject to liquidation and is split into two components:
+Takara 协议中的清算激励旨在奖励清算者执行清算操作，确保协议的偿付能力并促进高效的清算过程。此激励相当于被清算账户未偿借款金额的 10%，并分为两个部分：
 
-1\. **7% Liquidator Bonus**: This portion is awarded to the liquidator as a reward for promptly and effectively carrying out the liquidation. By offering this bonus, the protocol encourages active participation and ensures the timely resolution of at-risk accounts.
+1. **7% 清算者奖励**：这部分奖励分配给清算者，作为及时有效执行清算的奖励。通过提供这一奖励，协议鼓励积极参与并确保及时解决面临风险的账户。
 
-2\. **3% Reserve Allocation**: This portion is directed to the protocol reserves of the liquidated collateral. By contributing to the reserves, the protocol mitigates the risk of insolvency caused by cascading liquidations, supports short-term liquidity needs, and maintains overall market stability.
+2. **3% 储备分配**：这部分用于分配到已清算抵押物的协议储备。通过贡献于储备，协议缓解了因连锁清算引发的破产风险，支持短期流动性需求，并维持整体市场的稳定性。
+
