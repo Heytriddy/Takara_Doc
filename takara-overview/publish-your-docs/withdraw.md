@@ -21,12 +21,12 @@ description: Learn how to withdraw your assets from Takara
 
 1. 在弹出的 "**Withdraw**" 窗口中选择 "**Withdraw**" 选项。
 
-<div align="center"><figure><picture><source srcset="../../.gitbook/assets/Screenshot 2025-01-19 at 7.49.34 PM.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/Screenshot 2025-01-19 at 7.49.26 PM.png" alt="" width="375"></picture><figcaption><p>在本例中，使用的是 USDT 代币。但您也可通过下拉菜单选择其他资产。</p></figcaption></figure></div>
+<div align="center"><figure><picture><source srcset="../../.gitbook/assets/Screenshot 2025-01-19 at 7.49.34 PM.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/Screenshot 2025-01-19 at 7.49.26 PM.png" alt="" width="375"></picture><figcaption><p>在本例中，使用的是 USDT 代币。但您也可通过下拉菜单选择其他资产</p></figcaption></figure></div>
 
 2. 在 "**Withdraw**" 窗口中，输入您希望从 Takara 提取的金额。**请**确认当前有足够的流动性以完成提取。更多信息请参见下文。
 3. 点击 "**Withdraw**" 按钮。
 
-<div align="center"><figure><picture><source srcset="../../.gitbook/assets/Screenshot 2025-01-19 at 7.52.37 PM.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/Screenshot 2025-01-19 at 7.52.31 PM.png" alt="" width="375"></picture><figcaption><p>点击 "Withdraw" 即可发起提取操作。</p></figcaption></figure></div>
+<div align="center"><figure><picture><source srcset="../../.gitbook/assets/Screenshot 2025-01-19 at 7.52.37 PM.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/Screenshot 2025-01-19 at 7.52.31 PM.png" alt="" width="375"></picture><figcaption><p>点击 "Withdraw" 即可发起提取操作</p></figcaption></figure></div>
 
 4. 在您的钱包中 **确认** 交易并等待其完成。交易成功后，您将从目标市场中提取出相应资产。
 
