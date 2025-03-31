@@ -1,25 +1,27 @@
-# 📈 Interest Rate Model
+# 📈 利率模型（Interest Rate Model）
 
-## Borrow APR
+## 借款年利率（Borrow APR）
 
-The interest rate model for borrowed assets can be calculated using the following formula:
-
-```
-= Base + Multiplier * min(UtilizationRate, Kink) + max(JumpMultiplier * UtilizationRate - Kink, 
-```
-
-
-
-## Supply APR
-
-The interest rate model for supplying assets can be calculated using the following formula:
+借款资产的利率模型可以通过以下公式计算：
 
 ```
-= Distribute (Interest Paid by Borrowers Per Block - Reserve) to all suppliers, and convert it into APY
-
-= Distribute [(1 + Borrow APY) ^ (1 / BlocksPerYear) - 1] * Total Borrow * (1 - Reserve Factor) to all suppliers, and convert it into APY
-
-= {[(1 + Borrow APY) ^ (1 / BlocksPerYear) - 1] * Total Borrow * (1 - Reserve Factor) / Total Supply}, and convert it into APY
-
-= {1 + [(1 + Borrow APY) ^ (1/BlocksPerYear) - 1] * Total Borrow * (1 - Reserve Factor) / To
+= 基准利率 + 乘数 * min(利用率, Kink) + max(跳跃乘数 * 利用率 - Kink, 0)
 ```
+
+
+
+## 出借年利率（Supply APR）
+
+出借资产的利率模型可以通过以下公式计算：
+
+```
+= 将借款人每区块支付的利息减去储备金，分配给所有出借者，并转换为年化收益率（APY）
+
+= 将[(1 + 借款年利率) ^ (1 / 每年区块数) - 1] * 总借款 * (1 - 储备因子) 分配给所有出借者，并转换为年化收益率（APY）
+
+= {[(1 + 借款年利率) ^ (1 / 每年区块数) - 1] * 总借款 * (1 - 储备因子) / 总出借量}，并转换为年化收益率（APY）
+
+= {1 + [(1 + 借款年利率) ^ (1 / 每年区块数) - 1] * 总借款 * (1 - 储备因子) / 总出借量}
+```
+
+这两种计算模型分别用于借款和出借资产的利率计算，并考虑了各种因素，如借款年利率、区块每年数量、储备因子等。
